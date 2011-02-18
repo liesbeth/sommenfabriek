@@ -1,4 +1,10 @@
 Sommenfabriek::Application.routes.draw do
+  get "homepages/home"
+
+  get "homepages/about"
+
+  get "homepages/contents"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
