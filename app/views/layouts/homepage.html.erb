@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= @title %></title>
+  <%= stylesheet_link_tag :all %>
+  <%= stylesheet_link_tag 'public', :media => 'screen' %>
+  <%= javascript_include_tag :defaults %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+ <div class="container">
+    <div class="header"></div>
+    <div class="sidebar"><div class="sidebar_background"><div class="sidebar_buttons">
+      <ul class="nav">
+         <li>
+               <%= link_to_unless_current('home', root_path) %>
+         </li>
+         <li>
+               <%= link_to_unless_current('inhoud', contents_path) %>
+         </li>
+         <li>
+               <%= link_to_unless_current('informatie', about_path) %>
+         </li>
+       </ul>
+       <p>&copy;  Liesbeth van der Plas</p>
+     </div></div></div>
+   
+     <div class="content">
+       <div class="content_inner">
+         <%= yield %>
+       </div>
+     </div>
+     
+     <div class="footer"></div>
+  </div>
+
+</body>
+</html>
