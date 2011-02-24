@@ -1,9 +1,13 @@
 Sommenfabriek::Application.routes.draw do
-  get "homepages/home"
+  # get "homepages/home"
 
-  get "homepages/about"
+  # get "homepages/about"
 
-  get "homepages/contents"
+  # get "homepages/contents"
+  
+  match '/contents', :to => 'homepages#contents'
+  match '/about',   :to => 'homepages#about'
+  root :to => 'homepages#home'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
